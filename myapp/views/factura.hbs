@@ -1,0 +1,26 @@
+<div class="container">      
+    <div class="row">
+    <br>
+    <a href="/factura/nuevo/{{this._id}}" class="btn btn-primary">Nuevo</a>
+      <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>id de factura</th>
+            <th>Fecha</th>
+            <th>Concepto</th>
+            <th colspan="3">Operación</th>
+        </tr>
+        </thead>
+        {{#each facturas}}
+          <tr>
+            <td>{{this.facturas.idfactura}}</td> 
+            <td>{{this.facturas.fecha}}</td>
+            <td>{{this.facturas.concepto}}</td>
+            <td><a href="/factura/agregar/{{this._id}}">Modificar</a></td> 
+            <td><a href="/factura/modificar/{{this._id}}">Modificar</a></td> 
+            <td><a href="/factura/eliminar/{{this._id}}">Eliminar</a></td> 
+          </tr>          
+       {{/each}}   
+      </table>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="container">
+    <br />
+    <!-- Importante indicar el path donde se encuentra el metodo POST -->
+    <form action="/polizaForm/factura/nuevo/{{poliza._id}}" method="POST">
+        <input type="hidden" name="_id" value="{{poliza._id}}"/>
+        <div class="form-group">
+            <label for="idfactura">Id de la factura:</label>
+            <input type="number" class="form-control" id="idfactura" name="idfactura" value="{{poliza.facturas.id}}">
+        </div>
+        <div class="form-group">
+            <label for="apellidos">Fecha de la factura:</label>
+            <input type="text" class="form-control" id="fecha" name="fecha" value="{{poliza.facturas.fecha}}">
+        </div>
+        <div class="form-group">
+            <label for="descrip">Concepto:</label>
+            <input type="text" class="form-control" id="concepto" name="concepto" value="{{poliza.facturas.concepto}}">
+        </div>
+        <button type="submit" class="btn btn-primary">Aceptar</button>
+        <a href="/" class="btn btn-danger">Cancelar</a>
+    </form>
+</div>
