@@ -1,0 +1,21 @@
+<div class="container">
+    <br />
+    <!-- Importante indicar el path donde se encuentra el metodo POST -->
+    <form action="/polizaForm/poliza/operar" method="POST">
+        <input type="hidden" name="_id" value="{{poliza._id}}"/>
+        <div class="form-group">
+            <label for="id">Id de la poliza:</label>
+            <input type="number" class="form-control" id="id" name="id" value="{{poliza.id}}">
+        </div>
+        <div class="form-group">
+            <label for="apellidos">Empresa de la poliza:</label>
+            <input type="text" class="form-control" id="empresa" name="empresa" value="{{poliza.empresa}}">
+        </div>
+        <div class="form-group">
+            <label for="descrip">Descripcion:</label>
+            <input type="text" class="form-control" id="descripcion" name="descripcion" value="{{poliza.descripcion}}">
+        </div>
+        <button type="submit" class="btn btn-primary">Aceptar</button>
+        <a href="/" class="btn btn-danger">Cancelar</a>
+    </form>
+</div>

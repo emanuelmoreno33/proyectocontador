@@ -1,0 +1,26 @@
+<div class="container">      
+    <div class="row">
+    <br>
+    <a href="/poliza/nuevo" class="btn btn-primary">Nuevo</a>
+      <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>id</th>
+            <th>empresa</th>
+            <th>descripcion</th>
+            <th colspan="2">Operación</th>
+        </tr>
+        </thead>
+        {{#each polizas}}
+          <tr>
+            <td>{{this.id}}</td> 
+            <td>{{this.empresa}}</td>
+            <td>{{this.descripcion}}</td>
+            <td><a href="/poliza/modificar/{{this._id}}">Modificar</a></td> 
+            <td><a href="/poliza/eliminar/{{this._id}}">Eliminar</a></td> 
+          </tr>          
+       {{/each}}   
+      </table>
+    </div>
+</div>
+
