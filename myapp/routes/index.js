@@ -13,7 +13,6 @@ router.get('/', function(req, res, next) {
 });
 });
 
-
 router.get('/poliza/nuevo', (req, res, next) => {
   res.render('PolizaForm', {});
 });
@@ -27,7 +26,7 @@ router.get('/poliza/modificar/:id', (req, res, next) => {
 });
 
 
-router.get('/persona/eliminar/:id', (req, res, next) => {
+router.get('/poliza/eliminar/:id', (req, res, next) => {
   let idpoliza = req.params.id; 
   Poliza.remove({_id: idpoliza }, (err) => {
     if (err) throw err;

@@ -6,6 +6,9 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var polizaForm = require('./routes/polizaForm');
+
+var factura = require('./routes/factura');
+var facturaForm = require('./routes/facturaForm');
 var app = express();
 
 // view engine setup
@@ -20,6 +23,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/polizaForm', polizaForm);
+app.use('/factura',factura);
+app.use('/facturaForm',facturaForm);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

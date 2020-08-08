@@ -14,11 +14,11 @@ router.get('/:id', function(req, res, next) {
     });
   });
 
-router.get('/poliza/nuevo/:id', (req, res, next) => {
+router.get('/factura/nuevo/:id', (req, res, next) => {
   res.render('facturaForm', {});
 });
 
-router.get('/poliza/modificar/:id', (req, res, next) => {
+router.get('/factura/modificar/:id', (req, res, next) => {
   let idpoliza = req.params.id;  
   Poliza.findOne({_id: idpoliza }, (err, poliza) => {
     if (err) throw err;
@@ -27,7 +27,7 @@ router.get('/poliza/modificar/:id', (req, res, next) => {
 });
 
 
-router.get('/persona/eliminar/:id', (req, res, next) => {
+router.get('/factura/eliminar/:id', (req, res, next) => {
   let idpoliza = req.params.id; 
   Poliza.remove({_id: idpoliza }, (err) => {
     if (err) throw err;
