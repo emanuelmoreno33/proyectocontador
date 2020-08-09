@@ -6,14 +6,12 @@ let Persona = require('./../models/poliza');
 
 router.post('/poliza/operar', (req, res, next) => {
   console.log(req.body);  
-
   if (req.body._id === "") {
     let per = new Persona({
       id: req.body.id,
       empresa: req.body.empresa,
       descripcion: req.body.descripcion
     });
-    
     per.save();
   } else {    
     //console.log(req.body._id);

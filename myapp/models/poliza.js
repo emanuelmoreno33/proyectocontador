@@ -6,20 +6,20 @@ let polizaSchema = new Schema({
     empresa:String,
     descripcion:String,
     fecha:{type:Date,default:Date.now},
-    facturas:{
+    facturas:[{
         idfactura:String,
         fecha:{type:Date,default:Date.now},
         concepto:String,
-        cuentas:{
-            nocuenta:Number,
-            subcuenta:Number,
+        cuentas:[{
+            nocuenta:String,
+            subcuenta:String,
             nombre:String,
             tipo:String,
             parcial:Number,
             debe:Number,
             haber:Number
-        }
-    }
+        }]
+    }]
 }, { versionKey: false });
 
 let Poliza = mongoose.model('Polizas',polizaSchema);

@@ -5,22 +5,14 @@ let mongoose = require('./../config/conexion');
 let Persona = require('./../models/poliza');
 
 router.post('/factura/operar', (req, res, next) => {
-  console.log(req.body);  
-
-  if (req.body._id === "") {
-    let per = new Persona({
-      'facturas.idfactura': req.body.idfactura,
-      'facturas.fecha': req.body.fecha,
-      'facturas.concepto': req.body.concepto
-    });
-    
-    per.save();
-  } else {    
-    Persona.findByIdAndUpdate(req.body._id, { $push: req.body }, { new: true }, (err, model) => {
-      if (err) throw err;
-    });
-  }
-  res.redirect('/');
+  var id = req.body._id;
+  let user = Persona.findById(id);
+  var factura = {"idfactura" : req.body.idfactura,"fecha":req.body.fecha,"concepto": req.body.concepto};
+  user.findOneAndUpdate({_id: id}, {$push: {facturas: factura}},(err,model) => {
+    if(err) throw err;
+  });
+  console.log(user.facturas); // <= puedes verificar aquí que se ha actualizado el campo
+  res.redirect('/facturas/{{id}}');
 });
 
 module.exports = router;

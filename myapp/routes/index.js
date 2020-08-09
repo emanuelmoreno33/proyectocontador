@@ -5,6 +5,8 @@ var mongoose = require('./../config/conexion');
 var Poliza = require('./../models/poliza');
 
 
+var app = express();
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   Poliza.find((err,polizas)=> {
