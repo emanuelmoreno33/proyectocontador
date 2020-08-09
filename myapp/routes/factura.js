@@ -10,15 +10,16 @@ router.get('/:id', function(req, res, next) {
     let idpoliza = req.params.id;  
     Poliza.findOne({_id: idpoliza }, (err, poliza) => {
       if (err) throw err;
-      res.render('factura', { factura: poliza });
+      res.render('factura', { poliza: poliza });
     });
   });
 
-router.get('/factura/nuevo/:id', (req, res, next) => {
+  
+router.get('/nuevo/:id', (req, res, next) => {
   res.render('facturaForm', {});
 });
 
-router.get('/factura/modificar/:id', (req, res, next) => {
+router.get('/modificar/:id', (req, res, next) => {
   let idpoliza = req.params.id;  
   Poliza.findOne({_id: idpoliza }, (err, poliza) => {
     if (err) throw err;
@@ -27,7 +28,7 @@ router.get('/factura/modificar/:id', (req, res, next) => {
 });
 
 
-router.get('/factura/eliminar/:id', (req, res, next) => {
+router.get('/eliminar/:id', (req, res, next) => {
   let idpoliza = req.params.id; 
   Poliza.remove({_id: idpoliza }, (err) => {
     if (err) throw err;
