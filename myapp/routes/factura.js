@@ -11,7 +11,7 @@ router.get('/:id', function(req, res, next) {
     Poliza.findOne({_id:idpoliza }, (err, poliza) => {
       if (err) throw err;
       console.log(poliza);  
-      res.render('factura', { poliza: poliza });
+      res.render('factura', { poliza: poliza,idpoliza:idpoliza });
     });
   });
 

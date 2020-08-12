@@ -12,7 +12,7 @@ router.post('/factura/operar', (req, res, next) => {
     if(err) throw err;
   });
   console.log(user.facturas); // <= puedes verificar aquí que se ha actualizado el campo
-  res.redirect('/facturas/{{id}}');
+  res.redirect('/factura/'+id);
 });
 
 module.exports = router;

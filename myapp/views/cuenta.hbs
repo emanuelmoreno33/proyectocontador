@@ -1,0 +1,47 @@
+<div class="container">      
+    <div class="row">
+    <br>
+    <a href="/factura/nuevo/{{idpoliza}}" class="btn btn-primary">Nuevo</a>
+    <br>
+    {{idpoliza}}
+    <br>
+    {{poliza}}
+    {{#each poliza.facturas.cuentas }}
+    {{_id}}
+    {{/each}}
+    {{'poliza._id'}}
+    {{poliza._id}}
+    {{poliza.facturas}}
+    {{#each poliza }}
+    
+      <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Numero de cuenta</th>
+            <th>subcuenta</th>
+            <th>nombre</th>
+            <th>tipo</th>
+            <th>parcial</th>
+            <th>debe</th>
+            <th>haber</th>
+            <th colspan="2">Operación</th>
+        </tr>
+        </thead>
+        {{#each poliza.facturas.cuentas }}
+          <tr>
+            <td>1{{idfactura}}</td>
+            <td>{{nocuenta}}</td> 
+            <td>{{subcuenta}}</td>
+            <td>{{nombre}}</td>
+            <td>{{tipo}}</td>
+            <td>{{parcial}}</td>
+            <td>{{debe}}</td>
+            <td>{{haber}}</td>
+            <td><a href="/cuenta/modificar/{{idfactura}}">Modificar</a></td> 
+            <td><a href="/cuenta/eliminar/{{idfactura}}">Eliminar</a></td> 
+          </tr>          
+      {{/each}}
+      {{/each}}
+      </table>
+    </div>
+</div>

@@ -3,6 +3,7 @@
     <br>
     <a href="/factura/nuevo/{{poliza._id}}" class="btn btn-primary">Nuevo</a>
     <br>
+    {{idpoliza}}
       <table class="table table-striped">
         <thead>
         <tr>
@@ -17,7 +18,7 @@
             <td>{{idfactura}}</td> 
             <td>{{fecha}}</td>
             <td>{{concepto}}</td>
-            <td><a href="/cuenta/{{poliza._id}}/">Ver cuentas</a></td> 
+            <td><a href="/cuenta/{{idpoliza}}/{{_id}}/">Ver cuentas</a></td> 
             <td><a href="/factura/modificar/{{idfactura}}">Modificar</a></td> 
             <td><a href="/factura/eliminar/{{idfactura}}">Eliminar</a></td> 
           </tr>          

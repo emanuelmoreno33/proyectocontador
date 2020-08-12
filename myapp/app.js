@@ -9,6 +9,10 @@ var polizaForm = require('./routes/polizaForm');
 
 var factura = require('./routes/factura');
 var facturaForm = require('./routes/facturaForm');
+
+var cuenta =require('./routes/cuenta');
+
+
 var app = express();
 
 // view engine setup
@@ -25,6 +29,7 @@ app.use('/', indexRouter);
 app.use('/polizaForm', polizaForm);
 app.use('/factura',factura);
 app.use('/facturaForm',facturaForm);
+app.use('/cuenta',cuenta);
 
 
 // catch 404 and forward to error handler
