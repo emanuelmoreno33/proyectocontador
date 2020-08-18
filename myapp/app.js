@@ -11,6 +11,9 @@ var factura = require('./routes/factura');
 var facturaForm = require('./routes/facturaForm');
 
 var cuenta =require('./routes/cuenta');
+var cuentaForm = require('./routes/cuentaForm');
+
+var buscar = require('./routes/Search');
 
 
 var app = express();
@@ -30,6 +33,8 @@ app.use('/polizaForm', polizaForm);
 app.use('/factura',factura);
 app.use('/facturaForm',facturaForm);
 app.use('/cuenta',cuenta);
+app.use('/cuentaForm',cuentaForm);
+app.use('/busqueda',buscar);
 
 
 // catch 404 and forward to error handler

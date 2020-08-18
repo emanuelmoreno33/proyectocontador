@@ -11,8 +11,13 @@ router.get('/:id', function(req, res, next) {
      Poliza.find({"facturas._id":idpoliza},{facturas: {$elemMatch: {_id:idpoliza}}}, (err, poliza) => {
        if (err) throw err;
         console.log(poliza);  
-    res.render('cuenta', { poliza: poliza,idpoliza:idpoliza });
+    res.render('cuenta', { poliza: poliza,idpoliza:idpoliza,titulo: 'Cuenta' });
   });
+});
+
+router.get('/nuevo/:id', (req, res, next) => {
+  let idpoliza = req.params.id;  
+  res.render('cuentaForm', {idpoliza: idpoliza,titulo: 'Cuenta - Nuevo'});
 });
 
 module.exports = router;

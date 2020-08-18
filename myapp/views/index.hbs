@@ -9,7 +9,7 @@
             <th>id</th>
             <th>empresa</th>
             <th>descripcion</th>
-            <th colspan="3">Operación</th>
+            <th colspan="4">Operación</th>
         </tr>
         </thead>
         {{#each polizas}}
@@ -20,6 +20,7 @@
             <td><a href="/factura/{{this._id}}">Ver Facturas</a></td> 
             <td><a href="/poliza/modificar/{{this._id}}">Modificar</a></td> 
             <td><a href="/poliza/eliminar/{{this._id}}">Eliminar</a></td> 
+            <td><a href="/informe/{{this._id}}">Ver informe</a></td>
           </tr>          
        {{/each}}   
       </table>

@@ -1,0 +1,12 @@
+<div class="container">
+    <br />
+    <form action="/busqueda/mostrar" method="POST">
+        <input type="hidden" name="tipo" value="{{tipo}}"/>
+        <div class="form-group">
+            <label for="idfactura">Escriba la fecha a buscar, se mostraran resultados a partir de la misma:</label>
+            <input type="date" class="form-control" id="elem" name="elem">
+        </div>
+        <button type="submit" class="btn btn-primary">Aceptar</button>
+        <a href="/" class="btn btn-danger">Cancelar</a>
+    </form>
+</div>

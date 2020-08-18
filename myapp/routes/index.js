@@ -16,17 +16,16 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/poliza/nuevo', (req, res, next) => {
-  res.render('PolizaForm', {});
+  res.render('PolizaForm', {titulo: 'Poliza - Nuevo'});
 });
 
 router.get('/poliza/modificar/:id', (req, res, next) => {
   let idpoliza = req.params.id;  
   Poliza.findOne({_id: idpoliza }, (err, poliza) => {
     if (err) throw err;
-    res.render('PolizaForm', { poliza: poliza });
+    res.render('PolizaForm', { poliza: poliza,titulo: 'Poliza - Modificar' });
   });
 });
-
 
 router.get('/poliza/eliminar/:id', (req, res, next) => {
   let idpoliza = req.params.id; 
@@ -35,5 +34,15 @@ router.get('/poliza/eliminar/:id', (req, res, next) => {
     res.redirect('/');
   });
 });
+
+
+router.get('/informe/:id',(req,res,next)=>{
+  let idpoliza = req.params.id;  
+  Poliza.findOne({_id: idpoliza }, (err, poliza) => {
+    if (err) throw err;
+    res.render('informe', { poliza: poliza, titulo: 'Informe' });
+  });
+});
+
 
 module.exports = router;

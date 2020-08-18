@@ -1,0 +1,12 @@
+<div class="container">
+    <br />
+    <form action="/busqueda/mostrar" method="POST">
+        <input type="hidden" name="tipo" value="{{tipo}}"/>
+        <div class="form-group">
+            <label for="idfactura">Escriba el elemento a buscar:</label>
+            <input type="text" class="form-control" id="elem" name="elem">
+        </div>
+        <button type="submit" class="btn btn-primary">Aceptar</button>
+        <a href="/" class="btn btn-danger">Cancelar</a>
+    </form>
+</div>

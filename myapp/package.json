@@ -8,6 +8,8 @@
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
+    "ember-cli-babel": "^7.22.1",
+    "ember-truth-helpers": "^2.1.0",
     "express": "~4.16.1",
     "hbs": "^4.1.1",
     "http-errors": "~1.6.3",

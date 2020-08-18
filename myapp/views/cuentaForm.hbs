@@ -1,0 +1,43 @@
+<div class="container">
+    <br />
+    <form action="/cuentaForm/cuenta/operar" method="POST">
+        <input type="hidden" name="_id" value="{{idpoliza}}"/>
+        <div class="form-group">
+            <label for="idfactura">Clave de cuenta:</label>
+            <input type="text" class="form-control" id="nocuenta" name="nocuenta" value="{{poliza.factura.nocuenta}}">
+        </div>
+        <div class="form-group">
+            <label for="idfactura">Clave de subcuenta:</label>
+            <input type="text" class="form-control" id="subcuenta" name="subcuenta" value="{{poliza.factura.subcuenta}}">
+        </div>
+        <div class="form-group">
+            <label for="idfactura">Nombre del recibo:</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" value="{{poliza.factura.nombre}}">
+        </div>
+        <div class="form-group">
+            <label for="idfactura">Tipo de comprobante:</label>
+            <select class="custom-select mr-sm-2" id="tipo" name="tipo">
+        <option value="Ingreso" selected>Ingreso</option>
+        <option value="Egreso">Egreso</option>
+        <option value="Traslado">Traslado</option>
+        <option value="Recepcion de pagos">Recepcion de pagos</option>
+        <option value="Nomina">Nomina</option>
+        <option value="Retenciones e Información de Pagos">Retenciones e Información de Pagos</option>
+      </select>
+        </div>
+        <div class="form-group">
+            <label for="idfactura">Parcial:</label>
+            <input type="number" class="form-control" id="parcial" name="parcial" value="{{poliza.factura.parcial}}">
+        </div>
+        <div class="form-group">
+            <label for="idfactura">Debe:</label>
+            <input type="number" class="form-control" id="debe" name="debe" value="{{poliza.factural.debe}}">
+        </div>
+        <div class="form-group">
+            <label for="idfactura">Haber:</label>
+            <input type="number" class="form-control" id="haber" name="haber" value="{{poliza.factura.haber}}">
+        </div>
+        <button type="submit" class="btn btn-primary">Aceptar</button>
+        <a href="/factura/{{idpoliza}}" class="btn btn-danger">Cancelar</a>
+    </form>
+</div>

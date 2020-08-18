@@ -1,0 +1,75 @@
+<div class="container">      
+    <div class="row">
+        <center>
+        <h1>Poliza de la empresa {{poliza.empresa}}</h1>
+        </center>
+        <table class="table table-bordered">
+  <tbody>
+    <tr>
+      <th scope="row">Identificador de la poliza:</th>
+      <td>{{poliza.id}}</td>
+      <th scope="row">Fecha de registro:</th>
+      <td>{{poliza.fecha}}</td>
+    </tr>
+    <tr>
+      <th colspan="2">Descripción de la poliza:</th>
+      <td colspan="2">{{poliza.descripcion}}</td>
+    </tr>
+    </tbody>
+    </table>
+    <br>
+    <br>
+        {{#each poliza}}
+        {{#each facturas}}
+            <h3>Facturas:</h3>
+<table class="table table-bordered">
+    <thead>
+    <tr>
+      <th scope="col">Id de la factura</th>
+      <th scope="col">Concepto</th>
+      <th scope="col">Fecha</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <th scope="row">{{idfactura}}</th>
+      <td>{{concepto}}</td>
+      <td>{{fecha}}</td>
+      </tr>
+    </tbody>
+</table>
+    <h3>Cuentas de la factura:</h3>
+        <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th scope="col">Numero de cuenta</th>
+      <th scope="col">Subcuenta</th>
+      <th scope="col">Nombre de la cuenta</th>
+      <th scope="col">Tipo de cuenta</th>
+      <th scope="col">Parcial</th>
+      <th scope="col">Debe</th>
+      <th scope="col">Haber</th>
+    </tr>
+    </thead>
+        <tbody>
+    {{#each cuentas}}
+        <tr>
+        <th scope="row">{{nocuenta}}</th>
+      <td>{{subcuenta}}</td>
+      <td>{{nombre}}</td>
+      <td>{{tipo}}</td>
+      <td>{{parcial}}</td>
+      <td>{{debe}}</td>
+      <td>{{haber}}</td>
+      </tr>
+    {{/each}}
+        </tbody>
+</table>
+        {{/each}}
+        {{/each}}
+<br>
+<button type="button" class="btn btn-secondary" onclick="window.print()">Imprimir pantalla con otro ejemplo</button>
+<br>
+<br>
+    </div>
+</div>

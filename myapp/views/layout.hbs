@@ -8,7 +8,6 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
   </head>
   <body>
-
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" >Programa de contaduria</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,9 +18,32 @@
       <li class="nav-item active">
         <a class="nav-link" href="/">Inicio <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="/">Consultas <span class="sr-only">(current)</span></a>
-      </li>
+      <li class="nav-item active dropdown">
+       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Consultas
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/busqueda/escribir/idpoliza">por id de poliza</a>
+          <a class="dropdown-item" href="/busqueda/escribir/empresapoliza">por empresa de poliza</a>
+          <a class="dropdown-item" href="/busqueda/escribir/descrippoliza">por descripcion de poliza</a>
+          <a class="dropdown-item" href="/busqueda/fecha/fechapoliza">por fecha de poliza</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/busqueda/escribir/idfactura">por id de factura ingresada</a>
+          <a class="dropdown-item" href="/busqueda/fecha/fechafactura">por fecha una factura</a>
+          <a class="dropdown-item" href="/busqueda/escribir/concepto">por concepto de factura</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/busqueda/escribir/nocuenta">por numero de cuenta</a>
+          <a class="dropdown-item" href="/busqueda/escribir/subcuenta">por numero de subcuenta</a>
+          <a class="dropdown-item" href="/busqueda/escribir/nombrecuenta">por nombre de cuenta</a>
+          <a class="dropdown-item" href="/busqueda/seleccionar/tipocuenta">por tipo de cuenta</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/busqueda/agrupar/empresapoliza">agrupar por empresa las polizas</a>
+          <a class="dropdown-item" href="/busqueda/agrupar/aniopoliza">agrupar por año las polizas</a>
+          <a class="dropdown-item" href="/busqueda/agrupar/conceptofactura">agrupar por concepto la factura</a>
+          <a class="dropdown-item" href="/busqueda/agrupar/registroscuenta">contar registros por tipo de cuenta</a>
+          <a class="dropdown-item" href="/busqueda/agrupar/nombrecuenta">agrupar por nombre de cuenta</a>
+          <a class="dropdown-item" href="/busqueda/agrupar/numcuenta">agrupar por numero de cuenta</a>
+        </div>
       </li>
     </ul>
   </div>

@@ -1,0 +1,21 @@
+<div class="container">      
+    <div class="row">
+    <br>
+    {{#each polizas}}
+      <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>identificador de factura</th>
+            <th>Operación</th>
+        </tr>
+        </thead>
+        {{#each facturas}}
+          <tr>
+            <td>{{_id}}</td> 
+            <td><a href="/cuenta/{{idpoliza}}/{{_id}}/">Ver cuentas</a></td> 
+          </tr>        
+        {{/each}}
+      </table>
+      {{/each}}
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="container">      
+    <div class="row">
+    Se muestran las polizas que tienen el elemento buscado
+    {{#each polizas }}
+    <br>
+    <br>
+        <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Poliza</th>
+            <th>Ir</th>
+        </tr>
+        </thead>
+          <tr>
+            <td>{{_id}}</td>
+            <td><a href="/factura/{{this._id}}">Ver Facturas</a></td> 
+          </tr>         
+        </table>
+          {{/each}}
+
+    </div>
+</div>
